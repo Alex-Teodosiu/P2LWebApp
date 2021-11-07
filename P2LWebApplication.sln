@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2LWebApplication", "P2LWebApplication\P2LWebApplication.csproj", "{A6CF979B-048D-4655-A336-F33E9C985A1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P2LWebServer", "P2LWebServer\P2LWebServer.csproj", "{4CFEA6C3-69E7-4DE6-BA04-38EC31CABC9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6CF979B-048D-4655-A336-F33E9C985A1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6CF979B-048D-4655-A336-F33E9C985A1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6CF979B-048D-4655-A336-F33E9C985A1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6CF979B-048D-4655-A336-F33E9C985A1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CFEA6C3-69E7-4DE6-BA04-38EC31CABC9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CFEA6C3-69E7-4DE6-BA04-38EC31CABC9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CFEA6C3-69E7-4DE6-BA04-38EC31CABC9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CFEA6C3-69E7-4DE6-BA04-38EC31CABC9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
