@@ -4,4 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Blazored.Modal" Version="6.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+      <PackageReference Include="Telerik.Reporting" Version="13.2.19.1030" />
+    </ItemGroup>
+
 </Project>

@@ -1,0 +1,51 @@
+﻿@page "/AllResources"
+@using P2LWebApplication.Models
+@using P2LWebApplication.Services
+@using Blazored.Modal.Services
+
+@inject IResourceService _resourceService
+@inject NavigationManager NavigationManager
+@inject IModalService ModalService
+
+
+<h3>AllResources</h3>
+
+<table class="table">
+    <thead> <tr> <th>ID</th> <th>Name</th> <th>ADD BOOKING</th> </tr> </thead>
+    <tbody>
+    @foreach (var item in resourcesToShow)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            
+            @*<td>
+                <button @onclick="@(() => ModalService.Show<$"CreateBooking/{item.Name}">($"Create a booking for {item.Name}"))" class="btn btn-primary">Create Booking now! </button>
+            </td>*@
+            <td>
+            <button @onclick="@(() => GoToBooking(item.Id))">
+                <i class="oi oi-calendar" style="color: #1b6ec2"/>
+            </button>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+
+@code {
+    private IList<Resource> resourcesToShow = new List<Resource>();
+    
+    protected override async Task OnInitializedAsync()
+    {
+        resourcesToShow = await _resourceService.GetResourcesAsync();
+    }
+    
+    private void GoToBooking(int id)
+    {
+        NavigationManager.NavigateTo($"CreateBooking/{id}");
+    }
+
+    
+    
+}

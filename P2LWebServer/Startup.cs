@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using P2LWebServer.DataAccess;
 
 namespace P2LWebServer
 {
@@ -27,10 +28,12 @@ namespace P2LWebServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<ResourceDBContext>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "P2LWebServer", Version = "v1"});
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

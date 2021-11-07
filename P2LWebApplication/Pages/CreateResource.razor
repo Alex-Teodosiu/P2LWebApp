@@ -1,0 +1,28 @@
+﻿@page "/CreateResource"
+@using P2LWebApplication.Models
+@using P2LWebApplication.Services
+@inject NavigationManager NavigationManager
+@inject IResourceService ResourceService
+
+<h3>CreateResource</h3>
+
+<EditForm Model="@newResource" OnValidSubmit="@AddNewResource">
+    <DataAnnotationsValidator/> <ValidationSummary/>
+    <div class="form-group"> Name:<br/> <InputTextArea rows="1" @bind-Value="newResource.Name"/> </div>
+    <div class="form-group"> Quantity:<br/> <InputNumber @bind-Value="newResource.Quantity"/> </div>
+
+    <p class="actions">
+        <button class="btn btn-outline-dark" type="submit">Create</button>
+    </p>
+</EditForm>
+
+@code {
+    Resource newResource = new Resource();
+
+    private void AddNewResource()
+    {
+        ResourceService.AddResourceAsync(newResource);
+        NavigationManager.NavigateTo("/AllResources");
+    }
+    
+}
