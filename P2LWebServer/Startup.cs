@@ -11,7 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using P2LWebServer.BusinessLogic;
 using P2LWebServer.DataAccess;
+
 
 namespace P2LWebServer
 {
@@ -29,6 +31,7 @@ namespace P2LWebServer
         {
             services.AddControllers();
             services.AddScoped<ResourceDBContext>();
+            services.AddScoped<BookingValidation>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "P2LWebServer", Version = "v1"});

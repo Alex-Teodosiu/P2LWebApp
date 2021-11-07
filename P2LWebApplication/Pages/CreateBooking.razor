@@ -27,7 +27,6 @@
         <tr>
             <td>
                 <div class="form-group"><input @bind="newBooking.DateFrom" @bind:format="@Format" /> </div>
-
             </td>
             <td><div class="form-group"><input @bind="newBooking.DateTo" @bind:format="@Format" /> </div></td>
             <td><div class="form-group"><InputNumber @bind-Value="@newBooking.BookedQuantity"/> </div></td>
@@ -38,6 +37,7 @@
     
     <p>Selected Date: @newBooking.DateFrom.ToLongDateString()</p>
     <p>Selected Date: @newBooking.DateTo.ToLongDateString()</p>
+    <p>@message</p>
     <p class="actions">
     <button class="btn btn-outline-dark" type="submit">Create</button>
 </p>
@@ -49,6 +49,7 @@
     public string Format { get; set; } = "yyyy-MM-dd/HH:mm";
     [Parameter]
     public int id { get; set; }
+    string message= "";
     
     Booking newBooking = new Booking();
 
@@ -59,8 +60,17 @@
     
     private void AddNewResource()
     {
-        BookingService.AddBookingAsync(newBooking, id);
-        NavigationManager.NavigateTo("/AllResources");
+        try
+        {
+            BookingService.AddBookingAsync(newBooking, id);
+        }
+        catch (Exception e)
+        {
+            message = e.ToString();
+            Console.WriteLine(e);
+            throw;
+        }
+        //NavigationManager.NavigateTo("/AllResources");
     }
 }
 

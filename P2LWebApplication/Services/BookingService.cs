@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
@@ -20,8 +21,9 @@ namespace P2LWebApplication.Services
         {
             string authorJson = JsonSerializer.Serialize(booking);
             HttpContent content = new StringContent(authorJson, Encoding.UTF8, "application/json");
-            await client.PostAsync($"{uri}/Booking/{resourceId}", content);
+            using var httpResponse = await client.PostAsync($"{uri}/Booking/{resourceId}", content);
+            if (!httpResponse.IsSuccessStatusCode) throw new Exception(httpResponse.Content.ReadAsStringAsync().Result);
         }
-        
+
     }
 }

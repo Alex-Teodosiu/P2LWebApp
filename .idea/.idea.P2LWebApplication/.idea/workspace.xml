@@ -5,39 +5,16 @@
     <projectFile>P2LWebServer/P2LWebServer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e428588c-abf3-4265-b731-62eeb7851455" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Models/Booking.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Models/Resource.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/AllResources.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/CreateBooking.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/CreateResource.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Services/BookingService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Services/IBookingService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Services/IResourceService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebApplication/Services/ResourceService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebServer/Controllers/BookingController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebServer/Controllers/ResourceController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebServer/DataAccess/ResourceDBContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebServer/Model/Booking.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/P2LWebServer/Model/Resource.cs" afterDir="false" />
+    <list default="true" id="e428588c-abf3-4265-b731-62eeb7851455" name="Default Changelist" comment="Code Working from end to end without data validation">
+      <change afterPath="$PROJECT_DIR$/P2LWebServer/BusinessLogic/BookingValidation.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.P2LWebApplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.P2LWebApplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/App.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/App.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Data/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Data/WeatherForecastService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/P2LWebApplication.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/P2LWebApplication.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Pages/Counter.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Pages/FetchData.razor" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Pages/Index.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/Index.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Pages/_Host.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/_Host.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Shared/MainLayout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Shared/MainLayout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Pages/CreateBooking.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Pages/CreateBooking.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Services/BookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Services/BookingService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Services/IBookingService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Services/IBookingService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P2LWebApplication/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Shared/NavMenu.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebApplication/_Imports.razor" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebApplication/_Imports.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebServer/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/P2LWebServer/Controllers/BookingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebServer/Controllers/BookingController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P2LWebServer/P2LWebServer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebServer/P2LWebServer.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebServer/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebServer/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/P2LWebServer/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/P2LWebServer/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/P2LWebServer/WeatherForecast.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +26,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FB544B1C-B1F0-4EA3-B2F7-F4DE55167B93/D1/EntityFrameworkQueryableExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/FF8A735A-7E69-45FC-AB62-FA0C4B39A5AC/38/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -58,14 +36,12 @@
       <option value="$PROJECT_DIR$/P2LWebServer/.gitignore" />
       <option value="$PROJECT_DIR$/P2LWebServer/Model/DateTime.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/WeatherForecast.cs" />
-      <option value="$PROJECT_DIR$/P2LWebServer/Startup.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/P2LWebServer/Model/BookingDateTime.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/Model/Resource.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/DataAccess/ResourceDBContext.cs" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Models/Resource.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/Model/Booking.cs" />
-      <option value="$PROJECT_DIR$/P2LWebApplication/Shared/NavMenu.razor" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Pages/CreateResource.razor" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Startup.cs" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Pages/Index.razor" />
@@ -79,10 +55,15 @@
       <option value="$PROJECT_DIR$/P2LWebApplication/Services/IResourceService.cs" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Services/ResourceService.cs" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Pages/AllResources.razor" />
+      <option value="$PROJECT_DIR$/P2LWebServer/Services/BookingServiceImpl.cs" />
+      <option value="$PROJECT_DIR$/P2LWebServer/Services/BookingService.cs" />
+      <option value="$PROJECT_DIR$/P2LWebServer/Startup.cs" />
+      <option value="$PROJECT_DIR$/P2LWebServer/BusinessLogic/BookingValidation.cs" />
+      <option value="$PROJECT_DIR$/P2LWebApplication/Pages/CreateBooking.razor" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Services/IBookingService.cs" />
+      <option value="$PROJECT_DIR$/P2LWebApplication/Shared/NavMenu.razor" />
       <option value="$PROJECT_DIR$/P2LWebApplication/Services/BookingService.cs" />
       <option value="$PROJECT_DIR$/P2LWebServer/Controllers/BookingController.cs" />
-      <option value="$PROJECT_DIR$/P2LWebApplication/Pages/CreateBooking.razor" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="20aUzNY7hHAOJ63vMCirUNCR9WS" />
@@ -173,7 +154,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1636282454017</updated>
-      <workItem from="1636282475774" duration="30869000" />
+      <workItem from="1636282475774" duration="36302000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1636283219864</created>
@@ -182,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1636283219864</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Code Working from end to end without data validation">
+      <created>1636320013288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1636320013288</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +192,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Code Working from end to end without data validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code Working from end to end without data validation" />
   </component>
 </project>
